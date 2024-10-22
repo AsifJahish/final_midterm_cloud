@@ -1,2 +1,8 @@
 runtime: python39
-service: noteapp
+service: noteapp 
+
+entrypoint: gunicorn -b :$PORT doProject.wsgi
+
+env_variables:
+  GOOGLE_CLOUD_PROJECT: midproject-438621
+
